@@ -158,3 +158,21 @@ footer strong { display: block; font-size: 20px; color: var(--text); }
   h2 { font-size: 23px; }
   .topnav { gap: 12px; }
 }
+
+/* 오른쪽 고정 목차 (넓은 화면) */
+.toc-nav {
+  position: fixed; top: 50%; right: 28px; transform: translateY(-50%);
+  z-index: 40; display: none; flex-direction: column; gap: 0.7rem; padding: 1rem 0;
+}
+.toc-nav a {
+  font-size: 12px; font-weight: 600; color: rgba(29,29,31,.3);
+  padding-right: 0.85rem; border-right: 2px solid var(--line);
+  text-align: right; white-space: nowrap; transition: color .15s, border-color .15s;
+}
+.toc-nav a:hover { color: var(--text); text-decoration: none; }
+.toc-nav a.active { color: var(--accent); border-right-color: var(--accent); }
+@media (min-width: 1100px) {
+  .toc-nav { display: flex; }
+  .topnav .anchors { display: none; }
+}
+@media print { .toc-nav { display: none !important; } }
