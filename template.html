@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(프로젝트명) | 정도윤 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" class="back">← 전체 프로젝트</a>
+  <div class="anchors">
+    <a href="#overview">개요</a>
+    <a href="#contribution">기여</a>
+    <a href="#case-1">Case 1</a>
+    <a href="#case-2">Case 2</a>
+    <a href="#case-3">Case 3</a>
+    <a href="#arch">아키텍처</a>
+    <a href="#screens">화면 보기</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ───────── Hero ───────── -->
+<header class="hero">
+  <p class="tags"><span>(Kotlin)</span><span>(Compose)</span><span>(Stack)</span></p>
+  <h1>(프로젝트명)<br><small>(한 줄 정의: 무엇을 하는 서비스인지)</small></h1>
+  <p class="role">(회사) · (역할) · (기간 YY.MM ~ YY.MM)</p>
+  <p class="summary">(2~3문장 요약: 어떤 서비스에서 무엇을 맡아 어떤 결과를 냈는지)</p>
+
+  <div class="metrics">
+    <div><strong>(수치)</strong><span>(설명)</span></div>
+    <div><strong>(수치)</strong><span>(설명)</span></div>
+    <div><strong>(수치)</strong><span>(설명)</span></div>
+  </div>
+
+  <dl class="facts">
+    <dt>Tech</dt><dd>(기술 스택 나열)</dd>
+    <dt>Team</dt><dd>(PM n, Server n, Design n, Android n)</dd>
+    <dt>Links</dt><dd><a href="#">(스토어)</a> · <a href="#">(GitHub)</a></dd>
+  </dl>
+</header>
+
+<!-- ───────── Overview ───────── -->
+<section id="overview">
+  <p class="eyebrow">Overview</p>
+  <h2>프로젝트 개요</h2>
+  <p>(서비스 배경과 사용자: 누가, 어디서, 왜 쓰는지)</p>
+  <p>(내가 합류했을 때의 상태와 풀어야 했던 과제)</p>
+  <p><a href="#screens">화면으로 먼저 보기 →</a></p>
+</section>
+
+<!-- ───────── Contribution ───────── -->
+<section id="contribution">
+  <p class="eyebrow">My Contribution</p>
+  <h2>프로젝트 기여</h2>
+  <ul class="contrib">
+    <li><strong>(기여 1 제목)</strong> (한 문장 설명)</li>
+    <li><strong>(기여 2 제목)</strong> (한 문장 설명)</li>
+    <li><strong>(기여 3 제목)</strong> (한 문장 설명)</li>
+    <li><strong>(기여 4 제목)</strong> (한 문장 설명)</li>
+  </ul>
+  <div class="cards">
+    <a class="card" href="#case-1"><span>Case 01</span><strong>(트러블슈팅 1 제목)</strong><p>(한 줄 요약)</p></a>
+    <a class="card" href="#case-2"><span>Case 02</span><strong>(트러블슈팅 2 제목)</strong><p>(한 줄 요약)</p></a>
+    <a class="card" href="#case-3"><span>Case 03</span><strong>(트러블슈팅 3 제목)</strong><p>(한 줄 요약)</p></a>
+  </div>
+</section>
+
+<!-- ───────── Case 01 (Case 02·03은 이 블록 복사) ───────── -->
+<section id="case-1" class="case">
+  <p class="eyebrow">Case Study 01</p>
+  <h2>(트러블슈팅 제목)</h2>
+  <p class="sub">(한 줄 부제: 결과까지 한 문장)</p>
+
+  <div class="block problem">
+    <h3>Problem — (현상 한 줄)</h3>
+    <p>(어떤 상황에서 무엇이 일어났고, 누구에게 어떤 영향이 있었는지)</p>
+  </div>
+
+  <div class="block cause">
+    <h3>Cause — (원인 한 줄)</h3>
+    <p>(어떻게 추적했고 무엇이 원인이었는지)</p>
+  </div>
+
+  <figure>
+    <div class="ph">(스크린샷 / 다이어그램)</div>
+    <figcaption>(그림 설명)</figcaption>
+  </figure>
+
+  <div class="block solution">
+    <h3>Solution — (해결 한 줄)</h3>
+    <p>(무엇을 어떻게 바꿨는지, 왜 그 방법을 골랐는지)</p>
+    <p class="codecap">(파일명.kt) — (이 코드가 하는 일)</p>
+<pre><code>// (핵심 코드 5~20줄)</code></pre>
+    <p>(코드 설명)</p>
+  </div>
+
+  <div class="block result">
+    <h3>Result</h3>
+    <table>
+      <thead><tr><th>지표</th><th>Before</th><th>After</th></tr></thead>
+      <tbody>
+        <tr><td>(지표)</td><td>(값)</td><td>(값)</td></tr>
+        <tr><td>(지표)</td><td>(값)</td><td>(값)</td></tr>
+      </tbody>
+    </table>
+    <p>(배운 점 / 이후 규칙으로 만든 것 한 줄)</p>
+  </div>
+</section>
+
+<section id="case-2" class="case">
+  <p class="eyebrow">Case Study 02</p>
+  <h2>(트러블슈팅 제목)</h2>
+  <p class="sub">(한 줄 부제)</p>
+  <div class="block problem"><h3>Problem — (현상)</h3><p>(내용)</p></div>
+  <div class="block cause"><h3>Cause — (원인)</h3><p>(내용)</p></div>
+  <div class="block solution"><h3>Solution — (해결)</h3><p>(내용)</p>
+    <p class="codecap">(파일명) — (설명)</p>
+<pre><code>// (코드)</code></pre>
+  </div>
+  <div class="block result"><h3>Result</h3><p>(결과 수치)</p></div>
+</section>
+
+<section id="case-3" class="case">
+  <p class="eyebrow">Case Study 03</p>
+  <h2>(트러블슈팅 제목)</h2>
+  <p class="sub">(한 줄 부제)</p>
+  <div class="block problem"><h3>Problem — (현상)</h3><p>(내용)</p></div>
+  <div class="block cause"><h3>Cause — (원인)</h3><p>(내용)</p></div>
+  <div class="block solution"><h3>Solution — (해결)</h3><p>(내용)</p>
+    <p class="codecap">(파일명) — (설명)</p>
+<pre><code>// (코드)</code></pre>
+  </div>
+  <div class="block result"><h3>Result</h3><p>(결과 수치)</p></div>
+</section>
+
+<!-- ───────── Architecture ───────── -->
+<section id="arch">
+  <p class="eyebrow">Architecture</p>
+  <h2>아키텍처 상세</h2>
+  <figure>
+    <div class="ph tall">(모듈 의존성 / 시스템 구성 다이어그램)</div>
+    <figcaption>(그림 설명)</figcaption>
+  </figure>
+  <p>(구조를 이렇게 나눈 이유)</p>
+</section>
+
+<!-- ───────── Screens ───────── -->
+<section id="screens">
+  <p class="eyebrow">Screens</p>
+  <h2>화면으로 보는 핵심 기능</h2>
+  <div class="feature">
+    <h3>(화면 A · 화면 B)</h3>
+    <p>(기능 설명 1~2문장, 쓰인 기술)</p>
+    <div class="thumbs"><div class="ph"></div><div class="ph"></div><div class="ph"></div></div>
+  </div>
+  <div class="feature">
+    <h3>(화면 C · 화면 D)</h3>
+    <p>(기능 설명)</p>
+    <div class="thumbs"><div class="ph"></div><div class="ph"></div><div class="ph"></div></div>
+  </div>
+</section>
+
+<footer>
+  <strong>(프로젝트명)</strong>
+  <p>(한 줄 마무리: 핵심 수치 포함)</p>
+  <a href="index.html">← 전체 프로젝트로</a>
+</footer>
+
+</main>
+</body>
+</html>
