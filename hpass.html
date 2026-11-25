@@ -59,7 +59,7 @@
 <section id="overview">
   <p class="eyebrow">Overview</p>
   <h2>프로젝트 개요</h2>
-  <p>H-PASS는 사용자가 등록한 <strong>일정</strong>과 엘리베이터의 <strong>BLE 신호</strong>를 판단해, <strong>승강장 호출 버튼과 목적지 층 버튼을 자동으로 눌러 주는</strong> 스마트 IoT 서비스입니다. 사용자는 출퇴근 시간과 출발·도착 층만 등록하면, 엘리베이터 앞에서 버튼을 누를 필요가 없습니다.</p>
+  <p>H-PASS는 사용자가 등록한 <strong>일정</strong>과 엘리베이터의 <strong>BLE 신호</strong>를 판단해, <strong>승강장 호출 버튼과 목적지 층 버튼을 자동으로 눌러 주는</strong> 스마트 IoT 서비스입니다.</p>
   <p>승강장(Hall)과 엘리베이터 카(Car)에 설치된 BLE 장치가 <strong>현재 층과 운행 방향</strong>을 계속 송출합니다. 앱은 일정 시간대에 이 신호를 스캔해 <strong>신호 세기(RSSI)로 거리를 판단</strong>하고, 승강장에 다가가면 호출을, 탑승하면 목적지 층을 자동으로 등록합니다.</p>
   <p>핵심 과제는 <strong>앱을 열지 않아도 1M 이내에서 엘리베이터 호출이 되어야 한다</strong>는 점이었습니다. Android와 iOS는 백그라운드 BLE 제약사항이 달라서 하나의 Flutter 코드베이스 위에서 <strong>플랫폼별로 다른 백그라운드 구조</strong>를 설계했습니다.</p>
   <p><a href="#screens">화면으로 먼저 보기 →</a></p>
@@ -270,6 +270,7 @@ switch (packet.type) {
     <figcaption>화면은 UI Isolate, 스캔·판단·호출은 Background Isolate에 두고 이벤트로만 주고받는 구조. iOS는 BLE 입출력을 Swift에 위임</figcaption>
   </figure>
   <p>호출 로직을 UI에서 떼어 백그라운드 Isolate 하나에 모아, 앱 화면이 없거나 꺼져 있어도 같은 흐름으로 동작하게 했습니다.</p>
+  <p>Android는 Foreground Service 안에 별도 FlutterEngine(Isolate)을 띄워 화면과 무관하게 1초 주기로 스캔·판단하고, iOS는 <code>bluetooth-central</code> 백그라운드 모드와 State Restoration으로 BLE 이벤트가 올 때 깨어나 같은 Dart 로직을 실행합니다. 서비스는 시작할 때 로컬 저장소에서 일정을 직접 읽어, 화면이 뜨지 않은 상태에서도 동작합니다.</p>
 </section>
 
 <!-- ───────── Screens ───────── -->
